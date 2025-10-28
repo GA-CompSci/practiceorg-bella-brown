@@ -1,4 +1,5 @@
-********colors
+/********
+COLOR CHEAT SHEET 
 
 black- #110901
 bistre- #371B08
@@ -7,22 +8,80 @@ russet- #834017
 rust- #A8521E
 coca brown- #CE6426
 pumpkin- #F4762D
+
 *********/
-
-
-
-
-
-
-
 
 
 #hero {
     background-image: url("https://i.pinimg.com/736x/9c/45/94/9c4594a3f4535162a6b613c571a8b0a9.jpg");
 }
 
-.bg-black .stroke-text, [class*='bg-dark'] .stroke-text, [class*='bg-gradient-'] .stroke-text, [class*='bg-color-'] .stroke-text {
-    color: rgb(88, 41, 3);
-    -webkit-text-stroke-color: rgb(88, 41, 3);
+/* Original + Enhanced Hero Text Styling */
+.bg-black .stroke-text,
+[class*='bg-dark'] .stroke-text,
+[class*='bg-gradient-'] .stroke-text,
+[class*='bg-color-'] .stroke-text {
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(88, 41, 3);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ff6600, #ffb347, #ff6600);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 15px rgba(255, 120, 0, 0.4);
+  animation: hero-shimmer 6s linear infinite;
+  display: inline-block;
+}
+
+/* Shimmer gradient animation */
+@keyframes hero-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+
+.text-white-02 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 3rem; /* adjust for your layout */
+  color: #ff6600; /* bright Browns orange */
+  
+  /* Add a strong brown outline */
+  -webkit-text-stroke: 3px #582903; 
+  text-stroke: 3px #582903; /* for compatibility */
+  
+  /* Add subtle inner glow + depth */
+  text-shadow:
+    0 0 10px rgba(255, 102, 0, 0.5),
+    0 0 20px rgba(255, 102, 0, 0.3),
+    2px 2px 6px rgba(88, 41, 3, 0.6);
+  
+  /* Add a gradient shine */
+  background: linear-gradient(90deg, #ff6600, #ffb347, #ff6600);
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  animation: browns-shimmer 6s linear infinite;
+  transition: all 0.3s ease;
+}
+
+.text-white-02:hover {
+  color: #ffb347;
+  text-shadow:
+    0 0 15px rgba(255, 140, 0, 0.8),
+    0 0 30px rgba(255, 102, 0, 0.6);
+  transform: scale(1.05);
+}
+
+/* Smooth shimmer movement */
+@keyframes browns-shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 
