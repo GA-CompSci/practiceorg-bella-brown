@@ -1,0 +1,28 @@
+********colors
+
+black- #110901
+bistre- #371B08
+seal brown- #5D2D10
+russet- #834017
+rust- #A8521E
+coca brown- #CE6426
+pumpkin- #F4762D
+*********/
+
+
+
+
+
+
+
+
+
+#hero {
+    background-image: url("https://i.pinimg.com/736x/9c/45/94/9c4594a3f4535162a6b613c571a8b0a9.jpg");
+}
+
+.bg-black .stroke-text, [class*='bg-dark'] .stroke-text, [class*='bg-gradient-'] .stroke-text, [class*='bg-color-'] .stroke-text {
+    color: rgb(88, 41, 3);
+    -webkit-text-stroke-color: rgb(88, 41, 3);
+}
+
