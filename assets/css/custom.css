@@ -12,11 +12,24 @@ pumpkin- #F4762D
 *********/
 
 
+/* HERO SECTION */
 #hero {
-    background-image: url("https://i.pinimg.com/736x/9c/45/94/9c4594a3f4535162a6b613c571a8b0a9.jpg");
+  background-image: url("https://athlonsports.com/.image/t_share/MjEwODgyMzU3MDk0MjYyNjA5/cleveland-browns-wide-receiver-elijah-moore-8-and-quarterback-jameis-winston-5-and-tight-end-david-njoku-85.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
 }
 
-/* Original + Enhanced Hero Text Styling */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(55, 27, 8, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+/* TEXT STYLING */
 .bg-black .stroke-text,
 [class*='bg-dark'] .stroke-text,
 [class*='bg-gradient-'] .stroke-text,
@@ -34,39 +47,33 @@ pumpkin- #F4762D
   display: inline-block;
 }
 
-/* Shimmer gradient animation */
 @keyframes hero-shimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 
+/* HEADER COLOR */
+.header.header-color-black {
+  background: #371B08;
+  box-shadow: 0 4px 10px rgba(88, 41, 3, 0.6);
+}
 
+/* TITLE TEXT */
 .text-white-02 {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-size: 3rem; /* adjust for your layout */
-  color: #ff6600; /* bright Browns orange */
-  
-  /* Add a strong brown outline */
-  -webkit-text-stroke: 3px #582903; 
-  text-stroke: 3px #582903; /* for compatibility */
-  
-  /* Add subtle inner glow + depth */
+  font-size: 3rem;
+  color: #ff6600;
+  -webkit-text-stroke: 3px #582903;
+  text-stroke: 3px #582903;
   text-shadow:
     0 0 10px rgba(255, 102, 0, 0.5),
     0 0 20px rgba(255, 102, 0, 0.3),
     2px 2px 6px rgba(88, 41, 3, 0.6);
-  
-  /* Add a gradient shine */
   background: linear-gradient(90deg, #ff6600, #ffb347, #ff6600);
   -webkit-background-clip: text;
   background-clip: text;
-  
   animation: browns-shimmer 6s linear infinite;
   transition: all 0.3s ease;
 }
@@ -79,9 +86,62 @@ pumpkin- #F4762D
   transform: scale(1.05);
 }
 
-/* Smooth shimmer movement */
 @keyframes browns-shimmer {
   0% { background-position: 0% 50%; }
   100% { background-position: 200% 50%; }
 }
 
+/* 🟠 BUTTON STYLING — Browns Football Look */
+.btn-browns {
+  position: relative;
+  background: linear-gradient(135deg, #ff6600, #8b4513);
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 14px 36px;
+  border: 3px solid #582903;
+  border-radius: 40px;
+  box-shadow: 0 6px 15px rgba(88, 41, 3, 0.5);
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.btn-browns::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.btn-browns:hover::before {
+  left: 125%;
+}
+
+.btn-browns:hover {
+  background: linear-gradient(135deg, #ffb347, #ff6600);
+  box-shadow: 0 0 25px rgba(255, 102, 0, 0.8),
+              0 0 40px rgba(255, 120, 0, 0.5);
+  transform: scale(1.07) rotate(-1deg);
+}
+
+/* Optional: add football seam texture overlay */
+.btn-browns::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15) 0,
+    rgba(255, 255, 255, 0.15) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  opacity: 0.1;
+  pointer-events: none;
+}
