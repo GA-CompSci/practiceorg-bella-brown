@@ -13,6 +13,8 @@ pumpkin- #F4762D
 
 
 /* HERO SECTION */
+/* HERO SECTION */
+/* HERO SECTION */
 #hero {
   background-image: url("https://athlonsports.com/.image/t_share/MjEwODgyMzU3MDk0MjYyNjA5/cleveland-browns-wide-receiver-elijah-moore-8-and-quarterback-jameis-winston-5-and-tight-end-david-njoku-85.jpg");
   background-size: cover;
@@ -27,6 +29,12 @@ pumpkin- #F4762D
   inset: 0;
   background: rgba(55, 27, 8, 0.6);
   backdrop-filter: blur(2px);
+}
+
+/**** TICKETS SECTION ****/
+/**** TICKETS SECTION ****/
+/**** TICKETS SECTION ****/
+
 }
 
 /* TEXT STYLING */
@@ -64,9 +72,9 @@ pumpkin- #F4762D
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 3rem;
-  color: #ff6600;
+  color: red;
   -webkit-text-stroke: 3px #582903;
-  text-stroke: 3px #582903;
+  text-shadow: 3px #582903;
   text-shadow:
     0 0 10px rgba(255, 102, 0, 0.5),
     0 0 20px rgba(255, 102, 0, 0.3),
@@ -144,4 +152,129 @@ pumpkin- #F4762D
   );
   opacity: 0.1;
   pointer-events: none;
+}
+
+/* Enhanced Browns orange glow for week and team text */
+h4 a {
+  color: #000; /* Default text color */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+h4 a:hover {
+  color: #ff6700; /* Brighter Browns orange */
+  text-shadow: 
+    0 0 5px #ff6700,
+    0 0 10px #ff6700,
+    0 0 20px #ff6700,
+    0 0 30px #ff6700,
+    0 0 40px #ff6700; /* Stronger glow layers */
+  transform: scale(1.05); /* Slightly bigger pop */
+}
+body {
+    color: #622a06;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.border-top, .border-right, .border-bottom, .border-left {
+    border-width: 0;
+    border-style: solid;
+    border-color: #ff6600(18, 21, 24, 0.1) ;
+}
+
+.header[class*='header-color']:not(.transparent-dark) .header-logo a {
+    color: #ff6700;
+}
+
+.header[class*='header-color']:not(.transparent-dark) .header-menu .nav .nav-item .nav-link, .header[class*='header-color']:not(.transparent-dark) .header-menu .nav .nav-item .nav-dropdown-toggle {
+    color:#ff6700 ;
+
+
+  /* Browns Tickets Section Styling */
+#tickets {
+  background: linear-gradient(180deg, #2b1a0e 0%, #3b2412 100%);
+  padding: 80px 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a soft orange glow behind the section */
+#tickets::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 102, 0, 0.15), transparent 70%);
+  animation: glowPulse 6s infinite ease-in-out;
+  z-index: 0;
+}
+
+/* Ticket boxes */
+#tickets .col-lg-4 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+#tickets .d-flex {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 102, 0, 0.3);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(6px);
+}
+
+/* Hover effect: lift and glow */
+#tickets .d-flex:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 102, 0, 0.6);
+  background: rgba(255, 102, 0, 0.1);
+}
+
+/* Ticket icon */
+#tickets i {
+  font-size: 3rem;
+  color: #ff6600;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+#tickets .d-flex:hover i {
+  color: #ffa64d;
+  text-shadow: 0 0 20px rgba(255, 102, 0, 0.8);
+}
+
+/* Text links */
+#tickets a {
+  color: #fff;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#tickets a:hover {
+  color: #ff6600;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.8);
+}
+
+/* Date text */
+#tickets p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
 }
